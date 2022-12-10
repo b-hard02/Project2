@@ -152,7 +152,6 @@ class Controller(QMainWindow, Ui_MainWindow):
                 raise UUIDError
 
             skill_data = requests.get(f'https://sky.shiiyu.moe/api/v2/profile/{uuid}').json()
-            print(f'https://sky.shiiyu.moe/api/v2/profile/{uuid}\nType: {type(skill_data)}')
 
             for i in skill_data:
                 if i == 'error':
